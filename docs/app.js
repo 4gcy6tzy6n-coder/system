@@ -143,8 +143,13 @@
   var BUILDING_ALIAS = { '宁': '宁远楼' };
   function canonBuilding(b) { return BUILDING_ALIAS[b] || b; }
   function normalizeBuildings(list) {
-    list.forEach(function (r) { r.building = canonBuilding(r.building); });
-    return list;
+    // 线上/虚拟教室不是实体教室：即使数据里还残留也不显示
+    return list.filter(function (r) {
+      return r.roomName.indexOf('虚拟') < 0 && r.roomName.indexOf('线上') < 0;
+    }).map(function (r) {
+      r.building = canonBuilding(r.building);
+      return r;
+    });
   }
 
   async function loadRooms() {

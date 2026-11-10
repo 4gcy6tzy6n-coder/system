@@ -54,8 +54,9 @@ def main():
     def is_manual(r):
         return ('手动' in r['roomName']) or ('默认场地' in r['roomName'])
     def is_virtual(r):
-        # 虚拟教室是线上课堂，不是实体教室，不参与找空
-        return '虚拟' in r['roomName']
+        # 虚拟教室 / 线上教室都是线上课堂，不是实体教室，不参与找空
+        name = r['roomName']
+        return ('虚拟' in name) or ('线上' in name)
     rooms.sort(key=lambda r: (r['building'], is_manual(r), r['roomName']))
 
     # ---- 教学周 ----

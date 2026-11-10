@@ -3,6 +3,19 @@
 对外经济贸易大学教室空闲查询：选一间教室，直接看它**今天什么时候上课、什么时候空闲**。
 一个页面，三条信息：上课时间段（带课程名和老师）、空闲时间段、13 节速览条。
 
+**在线版（GitHub Pages）：https://4gcy6tzy6n-coder.github.io/system/** —— 直接用快照数据，免登录、免服务器。
+
+**本地实时版**：`node site/server.js` → http://127.0.0.1:8787 —— 通过浏览器会话直连教务平台，实时查课表。
+
+## 更新线上数据
+
+```bash
+node scripts/collect_occupancy.js     # 重新采集（断点续采）
+python3 scripts/normalize.py          # 生成 site/data/
+cp -R site/data/* docs/data/          # 同步到 Pages 目录
+git add -A && git commit -m "更新排课快照" && git push
+```
+
 ## 实时 vs 快照
 
 页面底部有一行小字说明当前数据：

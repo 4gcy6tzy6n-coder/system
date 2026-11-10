@@ -465,12 +465,31 @@ b { font-weight: 700; }
   pointer-events: none;
 }
 .strip__axis {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+  height: 13px;
   margin-top: 10px;
-  font: 400 10px/1 var(--font-mono);
+  font: 500 10px/1 var(--font-mono);
   color: var(--muted-2);
+  font-variant-numeric: tabular-nums;
 }
+.strip__axis span {
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+  transform: translateX(-50%);
+}
+.strip__axis span.is-first { transform: none; }
+.strip__axis span.is-last { transform: translateX(-100%); }
+.strip__axis span::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -5px;
+  width: 1px; height: 3px;
+  background: var(--line-2);
+}
+.strip__axis span.is-first::before { left: 0; }
+.strip__axis span.is-last::before { left: auto; right: 0; }
 .source { margin-top: 14px; font-size: 12.5px; color: var(--muted); }
 .source::before {
   content: "";
@@ -650,10 +669,11 @@ b { font-weight: 700; }
   .lesson__time { display: flex; gap: 8px; }
   .lesson__time span { display: inline; }
   .desk__strip { padding: 16px; }
-  .strip { grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 5px; }
-  .strip__slot { height: 46px; }
+  .strip { grid-template-columns: repeat(13, minmax(0, 1fr)); gap: 3px; }
+  .strip__slot { height: 42px; border-radius: 5px; }
+  .strip__slot .n { font-size: 10.5px; }
   .strip__slot .t { display: none; }
-  .strip__axis { display: none; }
+  .strip__axis { display: block; font-size: 8.5px; height: 12px; margin-top: 6px; }
   .finder-form { grid-template-columns: 1fr; padding: 16px; }
   .finder-summary strong { font-size: 32px; }
   .qa summary { font-size: 16.5px; gap: 12px; }
@@ -672,4 +692,8 @@ b { font-weight: 700; }
 /* 窄屏日期控件（iOS 固有宽度较大）：不撑破容器 */
 @media (max-width: 480px) {
   .field input[type="date"] { padding-inline: 10px; font-size: 14px; }
+}
+
+@media (max-width: 360px) {
+  .strip__axis { font-size: 7.5px; }
 }

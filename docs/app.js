@@ -365,6 +365,34 @@
     animate(freeBox.children, { y: 8, opacity: 0 }, { y: 0, opacity: 1, duration: 0.26, stagger: 0.04, ease: 'power2.out' });
   }
 
+  // 时间轴节点：按大节边界标注 8:00 / 9:50 / 11:20 / 12:10 / 13:30 / 15:20 / 16:50 / 17:40 / 18:30 / 20:00 / 20:50
+  var AXIS_NODES = [
+    { e: 0, t: '08:00' }, { e: 2, t: '09:50' }, { e: 4, t: '11:20' }, { e: 5, t: '12:10' },
+    { e: 6, t: '13:30' }, { e: 8, t: '15:20' }, { e: 9, t: '16:50' }, { e: 10, t: '17:40' },
+    { e: 11, t: '18:30' }, { e: 12, t: '20:00' }, { e: 13, t: '20:50' }
+  ];
+  var AXIS_NODES_TINY = [
+    { e: 0, t: '08:00' }, { e: 2, t: '09:50' }, { e: 6, t: '13:30' }, { e: 8, t: '15:20' }, { e: 11, t: '18:30' }
+  ];
+  var AXIS_NODES_MOBILE = [
+    { e: 0, t: '08:00' }, { e: 2, t: '09:50' }, { e: 6, t: '13:30' },
+    { e: 8, t: '15:20' }, { e: 11, t: '18:30' }, { e: 13, t: '20:50' }
+  ];
+  function renderStripAxis() {
+    var axis = document.querySelector('.strip__axis');
+    if (!axis) return;
+    var nodes = window.innerWidth <= 360 ? AXIS_NODES_TINY
+      : window.innerWidth <= 720 ? AXIS_NODES_MOBILE : AXIS_NODES;
+    axis.replaceChildren();
+    nodes.forEach(function (n) {
+      var s = el('span', '', n.t);
+      s.style.left = (n.e / 13 * 100) + '%';
+      if (n.e === 0) s.className = 'is-first';
+      if (n.e === 13) s.className = 'is-last';
+      axis.appendChild(s);
+    });
+  }
+
   function renderStrip(lessons) {
     var box = $('#strip');
     box.replaceChildren();
@@ -381,11 +409,11 @@
       var slot = el('div', 'strip__slot' + (lesson ? ' is-busy' : '') +
         (state.date === today && p.i === nowI ? ' is-now' : ''));
       slot.appendChild(el('span', 'n', String(p.i)));
-      slot.appendChild(el('span', 't', p.start));
       slot.title = '第 ' + p.i + ' 节 ' + p.start + '–' + p.end + ' · ' + (lesson ? lesson.course : '空闲');
       box.appendChild(slot);
     });
 
+    renderStripAxis();
     animate(box.children, { y: 6, opacity: 0 }, { y: 0, opacity: 1, duration: 0.26, stagger: 0.022, ease: 'power2.out' });
   }
 

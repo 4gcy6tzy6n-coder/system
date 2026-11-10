@@ -1,0 +1,13 @@
+{
+ "RoomTree": "{\"message\":\"invalid csrf token\"}",
+ "RoomQuery1": "{\"message\":\"invalid csrf token\"}",
+ "RoomQuery2": "{\"message\":\"invalid csrf token\"}",
+ "Periods": "{\"message\":\"invalid csrf token\"}",
+ "CourseTT1": "{\"message\":\"invalid csrf token\"}",
+ "CourseTT2": "{\"message\":\"invalid csrf token\"}",
+ "TTByDate": "{\"message\":\"invalid csrf token\"}",
+ "TTCountByDate": "{\"message\":\"invalid csrf token\"}",
+ "RoomRel": "{\"message\":\"invalid csrf token\"}",
+ "CurTTByRoom": "{\"message\":\"invalid csrf token\"}",
+ "SchedTables": "{\"message\":\"invalid csrf token\"}"
+}

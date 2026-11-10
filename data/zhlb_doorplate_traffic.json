@@ -1,0 +1,65 @@
+[
+ {
+  "url": "/banpai/platform/apis?actionName=GetV1UserInfo",
+  "method": "POST",
+  "post": "{\"schoolUid\":\"002\"}",
+  "status": 200,
+  "body": "{\"statusCode\":200,\"data\":{\"firstEntry\":true,\"userUid\":\"135668abbcff4acb899819e974add7fb\",\"uid\":\"135668abbcff4acb899819e974add7fb\",\"username\":\"s_11511148\",\"realName\":\"姚应亮\",\"nickName\":\"姚应亮\",\"phone\":\"\",\"userType\":\"student\",\"schoolUid\":\"002\",\"schoolCode\":\"xhkg\",\"schoolName\":\"对外经济贸易大学\",\"schoolPhotoUrl\":\"/api/resource/cstore/url?fileKey=1ecaa1eddcc846d39b7b5aaff3a6d6f0.jpeg&w=88&h=88\",\"roles\":[{\"roleCode\":\"STUDENT\",\"roleName\":\"学生\"}],\"studentCode\":\"202493003\",\"teacherCode\":\"\"},\"message\":\"ok\"}"
+ },
+ {
+  "url": "/banpai/platform/apis?actionName=GetV1UserPowers",
+  "method": "POST",
+  "post": "{\"unitUid\":\"002\"}",
+  "status": 200,
+  "body": "{\"statusCode\":200,\"data\":[{\"powerCode\":\"KINDLINK_COURSE_PORTAL\",\"powerName\":\"课程门户\",\"childrenPowers\":[]},{\"powerCode\":\"STUDENT_PERSONAL_SPACE\",\"powerName\":\"个人空间（学生）\"},{\"powerCode\":\"STUDENT_PERSONAL_CENTER\",\"powerName\":\"个人中心\",\"childrenPowers\":[]},{\"powerCode\":\"STUDENT_TIMETABLE\",\"powerName\":\"我的课表\"},{\"powerCode\":\"STUDENT_LEARNING_RECORD\",\"powerName\":\"学习记录\"},{\"powerCode\":\"TEACHER_STUDENT_EVALUATION_EXTERNAL\",\"powerName\":\"课程评教\"},{\"powerCode\":\"ROOM_ORDER:ORDER_APPLY\",\"powerName\":\"场地预约\"},{\"powerCode\":\"KINDLINK_COURSE_PORTAL\",\"powerName\":\"课程门户\"},{\"powerCode\":\"STUDENT_PERSONAL_CENTER\",\"powerName\":\"个人中心\"}],\"message\":\"ok\"}"
+ },
+ {
+  "url": "/banpai/platform/apis?actionName=GetV1SchoolConfigDiy",
+  "method": "POST",
+  "post": "{\"schoolUid\":\"002\"}",
+  "status": 200,
+  "body": "{\"statusCode\":200,\"data\":{\"ico\":\"\",\"badge\":\"\",\"backgrounds\":[],\"title\":\"\",\"subTitle\":\"\",\"schoolName\":\"对外经济贸易大学\",\"logoFileKey\":\"1ecaa1eddcc846d39b7b5aaff3a6d6f0.jpeg\",\"logoUrl\":\"https://zhlb.uibe.edu.cn/storage/store-pub/1ecaa1eddcc846d39b7b5aaff3a6d6f0.jpeg\",\"topLogoFileKey\":\"\",\"topLogoUrl\":\"\",\"backgroundFileKey\":\"A41161F9047F0BF413CA892618112B20.png\",\"backgroundUrl\":\"https://zhlb.uibe.edu.cn/storage/store-pub/A41161F9047F0BF413CA892618112B20.png\",\"defaultLogoFileKey\":\"init/mofang-local/1-00/2/17DDEBB044EDBA6B572124A208B3E0D3.png\",\"defaultLogoUrl\":\"https://zhlb.uibe.edu.cn/storage/store-pub/init/mofang-local/1-00/2/17DDEBB044EDBA6B572124A208B3E0D3.png\",\"defaultBackgroundFileKey\":\"init/mofang-local/1-00/2/A41161F9047F0BF413CA892618112B20.png\",\"defaultBackgroundUrl\":\"https://zhlb.uibe.edu.cn/storage/store-pub/init/mofang-local/1-00/2/A41161F9047F0BF413CA892618112B20.png\",\"unifiedIdentity\":{\"title\":\"\",\"desc\":\"\"},\"nonUnifiedIdentity\":{\"title\":\"\",\"desc\":\"\"},\"playerWaterMark\":1},\"message\":\"ok\"}"
+ },
+ {
+  "url": "/banpai/platform/apis?actionName=GetWebRoomOrderConfigV1GlobalConfig",
+  "method": "POST",
+  "post": "{\"schoolUid\":\"002\"}",
+  "status": 200,
+  "body": "{\"statusCode\":200,\"data\":{\"openDataSync\":false,\"openSign\":false,\"openSiteSign\":false},\"message\":\"操作成功\"}"
+ },
+ {
+  "url": "/banpai/platform/apis?actionName=GetWebRoomOrderConfigV1GlobalConfig",
+  "method": "POST",
+  "post": "{\"schoolUid\":\"002\"}",
+  "status": 200,
+  "body": "{\"statusCode\":200,\"data\":{\"openDataSync\":false,\"openSign\":false,\"openSiteSign\":false},\"message\":\"操作成功\"}"
+ },
+ {
+  "url": "/banpai/platform/apis?actionName=PostWebRoomOrderV1RoomListModel",
+  "method": "POST",
+  "post": "{\"page\":1,\"pageSize\":20,\"buildingUidList\":null,\"floorNumList\":null,\"roomStatus\":null,\"startTime\":1794294000000,\"endTime\":1794295800000,\"searchKeyword\":\"\",\"seatCountMin\":null,\"seatCountMax\":null,\"schoolUid\":\"002\"}",
+  "status": 200,
+  "body": "{\"statusCode\":200,\"data\":{\"pageSize\":20,\"page\":1,\"totalCount\":0,\"result\":[]},\"message\":\"操作成功\"}"
+ },
+ {
+  "url": "/banpai/platform/apis?actionName=GetWebBuildingV1List",
+  "method": "POST",
+  "post": "{\"schoolUid\":\"002\"}",
+  "status": 200,
+  "body": "{\"statusCode\":200,\"data\":[{\"buildingUid\":\"307ffbd908d44c0e9b6d94d2d3f8edc3\",\"buildingName\":\"博学楼\"},{\"buildingUid\":\"70f664eae3d844aaa56fc475b111e5e0\",\"buildingName\":\"诚信楼\"},{\"buildingUid\":\"aee24cda7f4845ae9f518be06de1da1a\",\"buildingName\":\"默认建筑\"},{\"buildingUid\":\"9a1e3cd3bbc54dd68fc326a58e25aa8f\",\"buildingName\":\"宁\"},{\"buildingUid\":\"dad7172ae71441b68e45272cc413c777\",\"buildingName\":\"宁远楼\"},{\"buildingUid\":\"0fc478f0119b4404bea379a6d0b4a101\",\"buildingName\":\"新求索楼\"},{\"buildingUid\":\"f33d2dcc8a4644889c761dd8221c7831\",\"buildingName\":\"知行楼\"}],\"message\":\"操作成功\"}"
+ },
+ {
+  "url": "/banpai/platform/apis?actionName=GetWebRoomOrderConfigV1RoomOrderAuditPagePermission",
+  "method": "POST",
+  "post": "{\"schoolUid\":\"002\"}",
+  "status": 200,
+  "body": "{\"statusCode\":200,\"data\":false,\"message\":\"操作成功\"}"
+ },
+ {
+  "url": "/banpai/platform/apis?actionName=GetWebBuildingRoomV1FloorList",
+  "method": "POST",
+  "post": "{\"schoolUid\":\"002\"}",
+  "status": 200,
+  "body": "{\"statusCode\":200,\"data\":[{\"floorNum\":1,\"floorName\":\"1楼\"},{\"floorNum\":2,\"floorName\":\"2楼\"},{\"floorNum\":3,\"floorName\":\"3楼\"},{\"floorNum\":4,\"floorName\":\"4楼\"},{\"floorNum\":5,\"floorName\":\"5楼\"},{\"floorNum\":6,\"floorName\":\"6楼\"},{\"floorNum\":7,\"floorName\":\"7楼\"},{\"floorNum\":8,\"floorName\":\"8楼\"},{\"floorNum\":9,\"floorName\":\"9楼\"},{\"floorNum\":10,\"floorName\":\"10楼\"},{\"floorNum\":11,\"floorName\":\"11楼\"},{\"floorNum\":12,\"floorName\":\"12楼\"},{\"floorNum\":13,\"floorName\":\"13楼\"},{\"floorNum\":14,\"floorName\":\"14楼\"},{\"floorNum\":15,\"floorName\":\"15楼\"},{\"floorNum\":16,\"floorName\":\"16楼\"},{\"floorNum\":17,\"floorName\":\"17楼\"},{\"floorNum\":18,\"floorName\":\"18楼\"},{\"floorNum\":19,\"floorName\":\"19楼\"},{\"floorNum\":20,\"floorName\":\"20楼\"}],\"message\":\"操作成功\"}"
+ }
+]

@@ -1,0 +1,86 @@
+[
+ {
+  "url": "https://zhlb.uibe.edu.cn/mf/edu-platform/api.json?actionName=GetV1UserPowers",
+  "method": "POST",
+  "post": "{\"unitUid\":\"002\"}",
+  "status": 200,
+  "body": "{\"statusCode\":0,\"data\":[{\"powerCode\":\"KINDLINK_COURSE_PORTAL\",\"powerName\":\"课程门户\",\"childrenPowers\":[]},{\"powerCode\":\"STUDENT_PERSONAL_SPACE\",\"powerName\":\"个人空间（学生）\"},{\"powerCode\":\"STUDENT_PERSONAL_CENTER\",\"powerName\":\"个人中心\",\"childrenPowers\":[]},{\"powerCode\":\"STUDENT_TIMETABLE\",\"powerName\":\"我的课表\"},{\"powerCode\":\"STUDENT_LEARNING_RECORD\",\"powerName\":\"学习记录\"},{\"powerCode\":\"TEACHER_STUDENT_EVALUATION_EXTERNAL\",\"powerName\":\"课程评教\"},{\"powerCode\":\"ROOM_ORDER:ORDER_APPLY\",\"powerName\":\"场地预约\"},{\"powerCode\":\"KINDLINK_COURSE_PORTAL\",\"powerName\":\"课程门户\"},{\"powerCode\":\"STUDENT_PERSONAL_CENTER\",\"powerName\":\"个人中心\"}],\"message\":\"ok\"}"
+ },
+ {
+  "url": "https://zhlb.uibe.edu.cn/mf/edu-platform/api.json?actionName=GetV1UnitServices",
+  "method": "POST",
+  "post": "{\"unitUid\":\"002\"}",
+  "status": 200,
+  "body": "{\"statusCode\":0,\"data\":{\"authApps\":[{\"appCode\":\"personal-space\",\"appName\":\"个人空间\"},{\"appCode\":\"course-portal-v2\",\"appName\":\"课程门户\"},{\"appCode\":\"seewo-banpai\",\"appName\":\"班牌管理\"}]},\"message\":\"ok\"}"
+ },
+ {
+  "url": "https://zhlb.uibe.edu.cn/mf/edu-platform/api.json?actionName=GetV1UserInfo",
+  "method": "POST",
+  "post": "{\"schoolUid\":\"002\"}",
+  "status": 200,
+  "body": "{\"statusCode\":0,\"data\":{\"firstEntry\":true,\"userUid\":\"135668abbcff4acb899819e974add7fb\",\"uid\":\"135668abbcff4acb899819e974add7fb\",\"username\":\"s_11511148\",\"realName\":\"姚应亮\",\"nickName\":\"姚应亮\",\"phone\":\"\",\"userType\":\"student\",\"schoolUid\":\"002\",\"schoolCode\":\"xhkg\",\"schoolName\":\"对外经济贸易大学\",\"schoolPhotoUrl\":\"/api/resource/cstore/url?fileKey=1ecaa1eddcc846d39b7b5aaff3a6d6f0.jpeg&w=88&h=88\",\"roles\":[{\"roleCode\":\"STUDENT\",\"roleName\":\"学生\"}],\"studentCode\":\"202493003\",\"teacherCode\":\"\"},\"message\":\"ok\"}"
+ },
+ {
+  "url": "https://zhlb.uibe.edu.cn/mf/edu-platform/api.json?actionName=GetV1MessagesUnreadCount",
+  "method": "POST",
+  "post": "{\"userId\":\"135668abbcff4acb899819e974add7fb\",\"userUid\":\"135668abbcff4acb899819e974add7fb\"}",
+  "status": 200,
+  "body": "{\"statusCode\":0,\"data\":0,\"message\":\"ok\"}"
+ },
+ {
+  "url": "https://zhlb.uibe.edu.cn/kindlink/frontend/api/course/admin/server/v1/public/list?serviceCode=DATA_WAREHOUSE_SERVICE",
+  "method": "GET",
+  "post": "",
+  "status": 200,
+  "body": "{\"code\":200,\"msg\":\"Success\",\"data\":[]}"
+ },
+ {
+  "url": "https://zhlb.uibe.edu.cn/mf/edu-platform/api.json?actionName=GetV2UserAuthServices",
+  "method": "POST",
+  "post": "{\"unitUid\":\"002\"}",
+  "status": 200,
+  "body": "{\"statusCode\":0,\"data\":{\"authApps\":[{\"appCode\":\"personal-space\",\"appName\":\"个人空间\"},{\"appCode\":\"course-portal-v2\",\"appName\":\"课程门户2.0\"},{\"appCode\":\"seewo-banpai\",\"appName\":\"场地管理\"}],\"schoolInfo\":{\"schoolUid\":\"002\",\"schoolCode\":\"xhkg\",\"schoolName\":\"对外经济贸易大学\",\"photoUrl\":\"/api/resource/cstore/url?fileKey=1ecaa1eddcc846d39b7b5aaff3a6d6f0.jpeg&w=88&h=88\",\"bannerUrl\":\"bannerUrl\",\"logoFileKey\":\"1ecaa1eddcc846d39b7b5aaff3a6d6f0.jpeg\"},\"role\":6},\"message\":\"ok\"}"
+ },
+ {
+  "url": "https://zhlb.uibe.edu.cn/kindlink/frontend/dataCenterReport",
+  "method": "POST",
+  "post": "{\"reportData\":{\"$cp\":{\"$tid\":\"c165b0ea-212b-4010-98b8-ff5c95159b27\",\"$date\":\"2026-11-10\",\"os\":\"Mac\",\"arch\":\"x86\"},\"$sp\":[{\"$code\":\"visit_platform\",\"event_id\":\"visit_platform\",\"user_uid\":\"135668abbcff4acb899819e974add7fb\",\"user_name\":\"姚应亮\",\"user_identity_code\":\"student\",\"user_identity_name\":\"学生\",\"school_code\":\"xhkg\",\"school_name\":\"对外经济贸易大学\",\"report_date\":\"2026-11-10\",\"event_time\":1794292015926}]},\"reportConfig\":{\"method\":\"POST\",\"headers\":{\"X-Friday-Appid\":\"ca058f3723e68c6c3e857d4946662b7e\",\"X-Fri",
+  "status": 200,
+  "body": "{\"code\":0,\"message\":\"success\"}"
+ },
+ {
+  "url": "https://zhlb.uibe.edu.cn/mf/edu-platform/api.json?actionName=GetV1AppsIndex",
+  "method": "POST",
+  "post": "{\"userId\":\"135668abbcff4acb899819e974add7fb\"}",
+  "status": 200,
+  "body": "{\"statusCode\":0,\"data\":{\"appList\":[{\"appId\":\"schoolPortalV2\",\"appName\":\"课程门户\",\"appDesc\":\"优质课程建设\\n开放共享资源学习\",\"appUrl\":\"/kindlink/frontend/coursePortal\",\"appType\":1,\"sso\":false,\"roleList\":[],\"color\":\"BLUE\",\"icon\":\"COURSE_PORTAL\",\"size\":\"STANDARD\"},{\"appId\":\"personalSpace\",\"appName\":\"个人空间\",\"appDesc\":\"个性化学习管理\\n学习资源随心定制\",\"appUrl\":\"/kindlink/frontend/personalCenter\",\"appType\":1,\"sso\":false,\"roleList\":[],\"color\":\"LIGHT_BLUE\",\"icon\":\"PERSONAL\",\"size\":\"STANDARD\"},{\"appId\":\"banpaiManage\",\"appName\":\"场地管理\",\"appDesc\":\"场地快速预约\\n门牌便捷管理\",\"appUrl\":\"/banpai/platform/place\",\"appType\":1,\"sso\":false,\"roleList\":[],\"color\":\"CYAN\",\"icon\":\"VENUE\",\"size\":\"STANDARD\"}],\"firstTitle\":\"智慧教学管理平台\",\"secondTitle\":\"助力数字化教学转型，服务教育教学质量提升\",\"homePageTitle\":\"智慧教学管理平台\"},\"message\":\"ok\"}"
+ },
+ {
+  "url": "https://zhlb.uibe.edu.cn/mf/edu-platform/api.json?actionName=GetV1SchoolConfigDiy",
+  "method": "POST",
+  "post": "{\"schoolUid\":\"002\"}",
+  "status": 200,
+  "body": "{\"statusCode\":0,\"data\":{\"ico\":\"\",\"badge\":\"\",\"backgrounds\":[],\"title\":\"\",\"subTitle\":\"\",\"schoolName\":\"对外经济贸易大学\",\"logoFileKey\":\"1ecaa1eddcc846d39b7b5aaff3a6d6f0.jpeg\",\"logoUrl\":\"https://zhlb.uibe.edu.cn/storage/store-pub/1ecaa1eddcc846d39b7b5aaff3a6d6f0.jpeg\",\"topLogoFileKey\":\"\",\"topLogoUrl\":\"\",\"backgroundFileKey\":\"A41161F9047F0BF413CA892618112B20.png\",\"backgroundUrl\":\"https://zhlb.uibe.edu.cn/storage/store-pub/A41161F9047F0BF413CA892618112B20.png\",\"defaultLogoFileKey\":\"init/mofang-local/1-00/2/17DDEBB044EDBA6B572124A208B3E0D3.png\",\"defaultLogoUrl\":\"https://zhlb.uibe.edu.cn/storage/store-pub/init/mofang-local/1-00/2/17DDEBB044EDBA6B572124A208B3E0D3.png\",\"defaultBackgroundFileKey\":\"init/mofang-local/1-00/2/A41161F9047F0BF413CA892618112B20.png\",\"defaultBackgroundUrl\":\"https://zhlb.uibe.edu.cn/storage/store-pub/init/mofang-local/1-00/2/A41161F9047F0BF413CA892618112B20.png\",\"unifiedIdentity\":{\"title\":\"\",\"desc\":\"\"},\"nonUnifiedIdentity\":{\"title\":\"\",\"desc\":\"\"},\"playerWaterMark\":1},\"message\":\"ok\"}"
+ },
+ {
+  "url": "https://sentry.cvtapi.com/api/505/envelope/?sentry_key=fff861d94d1543ebbee0b6a623c8633c&sentry_version=7&sentry_client=sentry.javascript.browser%2F7.106.0",
+  "method": "POST",
+  "post": "{\"sent_at\":\"2026-11-10T06:26:55.896Z\",\"sdk\":{\"name\":\"sentry.javascript.browser\",\"version\":\"7.106.0\"}}\n{\"type\":\"session\"}\n{\"sid\":\"033ff443fc554615aad3b2e53e1556ab\",\"init\":true,\"started\":\"2026-11-10T06:26:55.897Z\",\"timestamp\":\"2026-11-10T06:26:55.897Z\",\"status\":\"ok\",\"errors\":0,\"attrs\":{\"release\":\"base_2603B-stable-v2_69a86d8\",\"environment\":\"production\",\"user_agent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36\"}}",
+  "status": 200,
+  "body": "{}"
+ },
+ {
+  "url": "https://sentry.cvtapi.com/api/505/envelope/?sentry_key=fff861d94d1543ebbee0b6a623c8633c&sentry_version=7&sentry_client=sentry.javascript.browser%2F7.106.0",
+  "method": "POST",
+  "post": "{\"sent_at\":\"2026-11-10T06:26:55.906Z\",\"sdk\":{\"name\":\"sentry.javascript.browser\",\"version\":\"7.106.0\"}}\n{\"type\":\"session\"}\n{\"sid\":\"033ff443fc554615aad3b2e53e1556ab\",\"init\":false,\"started\":\"2026-11-10T06:26:55.897Z\",\"timestamp\":\"2026-11-10T06:26:55.906Z\",\"status\":\"crashed\",\"errors\":1,\"attrs\":{\"release\":\"base_2603B-stable-v2_69a86d8\",\"environment\":\"production\",\"user_agent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36\"}}",
+  "status": 200,
+  "body": "{}"
+ },
+ {
+  "url": "https://sentry.cvtapi.com/api/505/envelope/?sentry_key=fff861d94d1543ebbee0b6a623c8633c&sentry_version=7&sentry_client=sentry.javascript.browser%2F7.106.0",
+  "method": "POST",
+  "post": "{\"event_id\":\"1be3c743c5d64fec9e50c3dff46bbc1d\",\"sent_at\":\"2026-11-10T06:26:55.906Z\",\"sdk\":{\"name\":\"sentry.javascript.browser\",\"version\":\"7.106.0\"},\"trace\":{\"environment\":\"production\",\"release\":\"base_2603B-stable-v2_69a86d8\",\"public_key\":\"fff861d94d1543ebbee0b6a623c8633c\",\"trace_id\":\"44f06b347f2c42c69b0ea9a9c0310062\"}}\n{\"type\":\"event\"}\n{\"exception\":{\"values\":[{\"type\":\"Error\",\"value\":\"[MobX] minified error nr: 35. Find the full error at: https://github.com/mobxjs/mobx/blob/main/packages/mobx/src/e",
+  "status": 200,
+  "body": "{\"id\":\"1be3c743c5d64fec9e50c3dff46bbc1d\"}"
+ }
+]

@@ -1,0 +1,8 @@
+{
+ "TermList": "{\"statusCode\":40000,\"message\":\"请求参数非法\"}",
+ "BuildingList": "{\"statusCode\":40000,\"message\":\"请求参数非法\"}",
+ "BuildingRoomList": "{\"message\":\"No message available\"}",
+ "RoomSchedule": "{\"statusCode\":50000,\"message\":\"服务器内部错误\"}",
+ "RoomActivityDayList": "{\"statusCode\":50000,\"message\":\"服务器内部错误\"}",
+ "RoomOverview": "{\"statusCode\":1000000004,\"message\":\"学校 uid 不能为空\"}"
+}

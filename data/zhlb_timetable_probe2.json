@@ -1,0 +1,11 @@
+{
+ "RoomTree": "{\"message\":\"Internal Server Error\"}",
+ "RoomQuery2": "{\"message\":\"Internal Server Error\"}",
+ "Periods": "{\"message\":\"Internal Server Error\"}",
+ "CourseTT1": "{\"message\":\"Internal Server Error\"}",
+ "TTByDate": "{\"message\":\"Internal Server Error\"}",
+ "TTCountByDate": "{\"message\":\"Internal Server Error\"}",
+ "RoomRel": "{\"message\":\"Internal Server Error\"}",
+ "CurTTByRoom": "{\"message\":\"Internal Server Error\"}",
+ "SchedTables": "{\"message\":\"Internal Server Error\"}"
+}

@@ -1,0 +1,19 @@
+# 不提交的本地文件
+browser-profile/
+.npm-cache/
+site/node_modules/
+node_modules/
+raw/
+data/occupancy.ndjson
+data/occupancy_done.json
+data/zhlb_cookies.json
+data/*.json.tmp
+site/.taste-skill/
+site/shots/
+site/PLAN.md
+shots/
+.DS_Store
+
+# 开发副本（部署版本在 docs/）
+site/
+tmp_post.txt

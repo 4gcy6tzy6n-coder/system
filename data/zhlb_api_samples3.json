@@ -1,0 +1,9 @@
+{
+ "RoomList_all": "{\"statusCode\":200,\"data\":{\"pageSize\":5,\"page\":1,\"totalCount\":0,\"result\":[]},\"message\":\"操作成功\"}",
+ "RoomList_status2": "{\"statusCode\":200,\"data\":{\"pageSize\":5,\"page\":1,\"totalCount\":0,\"result\":[]},\"message\":\"操作成功\"}",
+ "BuildingList": "{\"statusCode\":40000,\"message\":\"请求参数非法\"}",
+ "BuildingRoomList": "{\"message\":\"No message available\"}",
+ "WebBuildingList": "{\"statusCode\":200,\"data\":[{\"buildingUid\":\"307ffbd908d44c0e9b6d94d2d3f8edc3\",\"buildingName\":\"博学楼\"},{\"buildingUid\":\"70f664eae3d844aaa56fc475b111e5e0\",\"buildingName\":\"诚信楼\"},{\"buildingUid\":\"aee24cda7f4845ae9f518be06de1da1a\",\"buildingName\":\"默认建筑\"},{\"buildingUid\":\"9a1e3cd3bbc54dd68fc326a58e25aa8f\",\"buildingName\":\"宁\"},{\"buildingUid\":\"dad7172ae71441b68e45272cc413c777\",\"buildingName\":\"宁远楼\"},{\"buildingUid\":\"0fc478f0119b4404bea379a6d0b4a101\",\"buildingName\":\"新求索楼\"},{\"buildingUid\":\"f33d2dcc8a4644889c761dd8221c7831\",\"buildingName\":\"知行楼\"}],\"message\":\"操作成功\"}",
+ "RoomCalendarDay": "{\"statusCode\":50000,\"message\":\"服务器内部错误\"}",
+ "RoomSchedule": "{\"statusCode\":50000,\"message\":\"服务器内部错误\"}"
+}

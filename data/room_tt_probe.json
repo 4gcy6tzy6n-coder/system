@@ -1,0 +1,12 @@
+{
+ "Buildings": "{\"statusCode\":200,\"data\":{\"timestamp\":1794292259573,\"status\":404,\"error\":\"Not Found\",\"message\":\"No message available\",\"path\":\"/api/building/v1/buildings\"},\"message\":\"操作成功\"}",
+ "Rooms": "{\"statusCode\":200,\"data\":{\"timestamp\":1794292259602,\"status\":404,\"error\":\"Not Found\",\"message\":\"No message available\",\"path\":\"/api/building/v1/rooms\"},\"message\":\"操作成功\"}",
+ "Rooms2": "{\"statusCode\":200,\"data\":{\"timestamp\":1794292259657,\"status\":404,\"error\":\"Not Found\",\"message\":\"No message available\",\"path\":\"/api/building/v1/rooms\"},\"message\":\"操作成功\"}",
+ "RoomTT_a": "{\"statusCode\":999999,\"message\":\"Failed to convert value of type 'null' to required type 'int'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [null] to type [int] for value 'null'; nested exception is java.lang.IllegalArgumentException: A null value cannot be assigned to a primitive type\"}",
+ "RoomTT_b": "{\"statusCode\":999999,\"message\":\"Failed to convert value of type 'null' to required type 'int'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [null] to type [int] for value 'null'; nested exception is java.lang.IllegalArgumentException: A null value cannot be assigned to a primitive type\"}",
+ "RoomWeekTT_a": "{\"statusCode\":999999,\"message\":\"Failed to convert value of type 'null' to required type 'int'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [null] to type [int] for value 'null'; nested exception is java.lang.IllegalArgumentException: A null value cannot be assigned to a primitive type\"}",
+ "RoomWeekTT_b": "{\"statusCode\":50000,\"message\":\"服务器内部错误\"}",
+ "RoomWeekCfg": "{\"statusCode\":50000,\"message\":\"服务器内部错误\"}",
+ "RoomDaySeat": "{\"statusCode\":40000,\"message\":\"参数错误:schoolUid\"}",
+ "WebPlans": "{\"statusCode\":40000,\"message\":\"参数错误:schoolId\"}"
+}

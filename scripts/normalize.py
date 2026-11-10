@@ -31,6 +31,14 @@ PERIODS = [
     {"i": 13, "start": "20:05", "end": "20:50"},
 ]
 
+def canon_building(name):
+    """把教务数据里同一栋楼的异名合并成规范名。
+    数据源里有一条手工占位场地所在楼写作「宁」，实为宁远楼。"""
+    n = (name or '').strip()
+    if n == '宁':
+        return '宁远楼'
+    return n
+
 def main():
     # ---- 房间 ----
     rooms_wrap = json.load(open(os.path.join(DATA, 'rooms_full.json'), encoding='utf-8'))
@@ -38,12 +46,14 @@ def main():
     for b in rooms_wrap:
         for r in b['rooms']:
             rooms.append({
-                'building': b['building']['buildingName'],
+                'building': canon_building(b['building']['buildingName']),
                 'roomUid': r['roomUid'],
                 'roomName': r['roomName'],
                 'seatCount': r.get('seatCount') or 0,
             })
-    rooms.sort(key=lambda r: (r['building'], r['roomName']))
+    def is_manual(r):
+        return ('手动' in r['roomName']) or ('默认场地' in r['roomName'])
+    rooms.sort(key=lambda r: (r['building'], is_manual(r), r['roomName']))
 
     # ---- 教学周 ----
     plan = json.load(open(os.path.join(DATA, 'timetable_plan.json'), encoding='utf-8'))['data']

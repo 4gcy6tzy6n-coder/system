@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>教室查询 · UIBE 教室空闲时间表</title>
+<meta name="description" content="选一间教室和一个日期，查看 13 节的占用课程与空闲时段。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="教室查询 · UIBE 教室空闲时间表">
+<meta property="og:description" content="选一间教室和一个日期，查看 13 节的占用课程与空闲时段。">
+<meta property="og:image" content="share.jpg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="rooms">
+<a class="skip" href="#main">跳到正文</a>
+
+<header class="nav">
+  <div class="wrap nav__in">
+    <a class="brand" href="index.html" aria-label="UIBE 空闲教室 首页">
+      <svg class="brand__mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19V9a7 7 0 0 1 14 0v10" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M9 19v-7a3 3 0 0 1 6 0v7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <span class="brand__text">UIBE <em>空闲教室</em></span>
+    </a>
+    <nav class="nav__links" aria-label="主导航">
+      <a href="rooms.html" class="is-active" aria-current="page">教室查询</a>
+      <a href="free.html">按时段找空</a>
+      <a href="about.html">数据说明</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="page">
+  <div class="wrap">
+    <header class="page-head">
+      <p class="crumbs"><a href="index.html">首页</a><span>/</span>教室查询</p>
+      <h1>查一间教室</h1>
+      <p class="sub">选教学楼、教室和日期，查看今天 13 节的占用与空闲。</p>
+    </header>
+
+    <section class="desk" aria-label="教室时间表">
+      <div class="desk__controls">
+        <label class="field">
+          <span>教学楼</span>
+          <div class="select"><select id="sel-building"></select></div>
+        </label>
+        <label class="field field--room">
+          <span>教室</span>
+          <div class="select"><select id="sel-room"></select></div>
+        </label>
+        <label class="field field--date">
+          <span>日期</span>
+          <input type="date" id="sel-date">
+        </label>
+      </div>
+
+      <div class="desk__answer" id="answer" role="status" aria-live="polite">
+        <div class="answer answer--busy">
+          <div class="answer__head"><span class="tag tag--busy">上课</span></div>
+          <div class="answer__body" id="answer-busy"></div>
+        </div>
+        <div class="answer answer--free">
+          <div class="answer__head"><span class="tag tag--free">空闲</span></div>
+          <div class="answer__body" id="answer-free"></div>
+        </div>
+      </div>
+
+      <div class="desk__strip">
+        <div class="strip" id="strip" aria-hidden="true"></div>
+        <div class="strip__axis" aria-hidden="true"><span>08:00</span><span>12:10</span><span>17:40</span><span>20:50</span></div>
+        <p class="source" id="source-note"></p>
+      </div>
+    </section>
+
+    <p class="desk__next"><a href="free.html">按时段找空教室 →</a></p>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__in">
+    <span class="footer__brand">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19V9a7 7 0 0 1 14 0v10" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M9 19v-7a3 3 0 0 1 6 0v7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+      UIBE 空闲教室
+    </span>
+    <nav class="footer__nav" aria-label="页脚导航">
+      <a href="rooms.html">教室查询</a>
+      <a href="free.html">按时段找空</a>
+      <a href="about.html">数据说明</a>
+    </nav>
+    <span class="footer__legal">非官方工具 · 数据仅供找空教室参考</span>
+  </div>
+</footer>
+
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

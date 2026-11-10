@@ -113,10 +113,10 @@
   "18": "2027-01-04"
  },
  "stats": {
-  "rooms": 248,
-  "roomsWithClasses": 214,
-  "lessonInstances": 43887,
-  "daysWithClasses": 112,
+  "rooms": 212,
+  "roomsWithClasses": 212,
+  "lessonInstances": 43795,
+  "daysWithClasses": 105,
   "roomsMissingFromCatalog": {}
  }
 }

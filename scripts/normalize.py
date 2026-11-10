@@ -53,6 +53,9 @@ def main():
             })
     def is_manual(r):
         return ('手动' in r['roomName']) or ('默认场地' in r['roomName'])
+    def is_virtual(r):
+        # 虚拟教室是线上课堂，不是实体教室，不参与找空
+        return '虚拟' in r['roomName']
     rooms.sort(key=lambda r: (r['building'], is_manual(r), r['roomName']))
 
     # ---- 教学周 ----
@@ -101,6 +104,28 @@ def main():
                 if uid not in {r['roomUid'] for r in rooms}:
                     missing_rooms[uid] = les.get('roomName', uid)
 
+    # ---- 过滤房间：虚拟教室（线上课堂）与全学期零课次的教室不写入 ----
+    busy_count = {}
+    for ds, per_room in schedule.items():
+        for uid, blks in per_room.items():
+            busy_count[uid] = busy_count.get(uid, 0) + len(blks)
+    before = len(rooms)
+    virtual = [r for r in rooms if is_virtual(r)]
+    rooms = [r for r in rooms if not is_virtual(r)]
+    idle = [r for r in rooms if busy_count.get(r['roomUid'], 0) == 0]
+    rooms = [r for r in rooms if busy_count.get(r['roomUid'], 0) > 0]
+    kept_ids = {r['roomUid'] for r in rooms}
+    # 同步裁掉课表里已不存在房间的记录
+    for ds in list(schedule.keys()):
+        schedule[ds] = {uid: b for uid, b in schedule[ds].items() if uid in kept_ids}
+        if not schedule[ds]:
+            del schedule[ds]
+    print(f"房间过滤: 原 {before} 间 → 虚拟教室 {len(virtual)} 间、零课次 {len(idle)} 间已剔除 → 保留 {len(rooms)} 间")
+    if virtual:
+        print('  虚拟教室:', [r['roomName'] for r in virtual])
+    if idle:
+        print('  零课次:', [r['roomName'] for r in idle][:12], '...' if len(idle) > 12 else '')
+
     # 排序：每天内每房间按开始节次
     schedule_out = {}
     for ds in sorted(schedule):
@@ -113,6 +138,7 @@ def main():
     for ds, rooms_map in schedule_out.items():
         json.dump(rooms_map, open(os.path.join(SITE_DATA, 'days', ds + '.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
 
+    total_lessons = sum(len(b) for ds in schedule_out.values() for b in ds.values())
     busy_rooms = {uid for ds in schedule_out.values() for uid in ds}
     meta = {
         'generatedAt': date.today().isoformat(),

@@ -82,7 +82,8 @@ b { font-weight: 700; }
   letter-spacing: -.01em;
   white-space: nowrap;
 }
-.brand__mark { width: 24px; height: 24px; color: var(--cyan); flex: none; }
+.brand__mark { width: 30px; height: 30px; flex: none; object-fit: contain; display: block; }
+.footer__brand .brand__mark { width: 26px; height: 26px; display: inline-block; vertical-align: -6px; }
 .brand__text em { font-style: normal; font-weight: 400; color: var(--muted); }
 .nav__links {
   display: flex;

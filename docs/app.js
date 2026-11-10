@@ -241,8 +241,7 @@
     var tl = window.gsap.timeline({ defaults: { ease: 'power3.out' } });
     tl.from('.home h1', { y: 22, opacity: 0, duration: 0.7 })
       .from('.home .lead, .home__stats', { y: 12, opacity: 0, duration: 0.45, stagger: 0.08 }, '-=0.45')
-      .from('.entries .entry', { y: 16, opacity: 0, duration: 0.5, stagger: 0.08 }, '-=0.25')
-      .from('.now', { y: 12, opacity: 0, duration: 0.45 }, '-=0.2');
+      .from('.entries .entry', { y: 16, opacity: 0, duration: 0.5, stagger: 0.08 }, '-=0.25');
   }
 
   /* ---------------------------------------------------------- rooms */
@@ -591,7 +590,7 @@
   async function init() {
     await loadBase();
     await loadRooms();
-    if (PAGE === 'home') { homeEntrance(); initHome(); countUp(); }
+    if (PAGE === 'home') { homeEntrance(); countUp(); }
     else if (PAGE === 'rooms') { initRooms(); }
     else if (PAGE === 'free') { initFree(); }
     else if (PAGE === 'about') { initAbout(); }

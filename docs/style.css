@@ -349,6 +349,8 @@ b { font-weight: 700; }
 .field select,
 .field input[type="date"] {
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
   height: 48px;
   padding: 0 14px;
   border: 1px solid var(--line-2);
@@ -606,11 +608,12 @@ b { font-weight: 700; }
 
 /* ------------------------------------------------------------ responsive */
 @media (max-width: 900px) {
-  .desk__controls { grid-template-columns: 1fr 1fr; }
+  .desk__controls { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
   .desk__controls .field--date { grid-column: 1 / -1; }
   .desk__answer { grid-template-columns: 1fr; }
   .answer--busy { border-right: 0; border-bottom: 1px solid var(--line); }
-  .finder-form { grid-template-columns: 1fr 1fr; }
+  .finder-form { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .finder-form .field--date { grid-column: 1 / -1; }
   .finder-form .btn { grid-column: 1 / -1; }
   .about__cols { grid-template-columns: 1fr; }
 }
@@ -640,7 +643,7 @@ b { font-weight: 700; }
   .bar { height: 150px; }
   .page { padding-block: 32px 64px; }
   .page-head h1 { margin-top: 10px; }
-  .desk__controls { grid-template-columns: 1fr; padding: 16px; }
+  .desk__controls { grid-template-columns: minmax(0, 1fr); padding: 16px; }
   .field select, .field input[type="date"] { height: 46px; }
   .answer { padding: 18px 16px; }
   .lesson { grid-template-columns: 1fr; gap: 3px; }
@@ -664,4 +667,9 @@ b { font-weight: 700; }
     animation-duration: .001ms !important;
     transition-duration: .001ms !important;
   }
+}
+
+/* 窄屏日期控件（iOS 固有宽度较大）：不撑破容器 */
+@media (max-width: 480px) {
+  .field input[type="date"] { padding-inline: 10px; font-size: 14px; }
 }
